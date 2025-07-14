@@ -1,0 +1,12 @@
+D:\Freelance\Working\Bookshop\BookShop.Data\bin\Release\net8.0\BookShop.Data.deps.json
+D:\Freelance\Working\Bookshop\BookShop.Data\bin\Release\net8.0\BookShop.Data.dll
+D:\Freelance\Working\Bookshop\BookShop.Data\bin\Release\net8.0\BookShop.Data.pdb
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.csproj.AssemblyReference.cache
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.AssemblyInfoInputs.cache
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.AssemblyInfo.cs
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.csproj.CoreCompileInputs.cache
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.dll
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\refint\BookShop.Data.dll
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\BookShop.Data.pdb
+D:\Freelance\Working\Bookshop\BookShop.Data\obj\Release\net8.0\ref\BookShop.Data.dll

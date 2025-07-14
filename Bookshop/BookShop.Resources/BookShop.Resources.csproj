@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UseWpf>true</UseWpf>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="ResourceDictionaries\BaseTheme.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="ResourceDictionaries\lang.ru-RU.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="ResourceDictionaries\lang.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Themes\BlueTheme.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Themes\PinkTheme.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BookShop.Mvvm\BookShop.Mvvm.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Resources\Background.jpg" />
+      <Resource Include="Resources\cursor.cur" />
+    </ItemGroup>
+
+</Project>

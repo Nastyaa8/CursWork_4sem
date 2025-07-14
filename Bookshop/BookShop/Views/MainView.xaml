@@ -1,0 +1,35 @@
+﻿<base:BaseUserControl x:Class="BookShop.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:base="clr-namespace:BookShop.Views.Base"
+             xmlns:viewModels="clr-namespace:BookShop.ViewModels"
+             xmlns:bookShop="clr-namespace:BookShop"
+             xmlns:converters="clr-namespace:BookShop.Mvvm.Converters;assembly=BookShop.Mvvm"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel, IsDesignTimeCreatable=True}"
+             Background="{DynamicResource WindowBackground}"
+             d:DesignHeight="300" d:DesignWidth="1200">
+    <UserControl.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <UniformGrid Rows="1">
+            <Button Content="{DynamicResource Catalog}" Margin="5" Command="{Binding OpenCatalogCommand}"></Button>
+            <Button Visibility="{Binding IsAdmin, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay}" Content="{DynamicResource Clients}" Margin="5" Command="{Binding OpenUsersCommand}"/>
+            <Button Visibility="{Binding IsAdmin, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay}" Content="{DynamicResource Events}" Margin="5" Command="{Binding OpenEventsCommand}"/>
+            <Button Visibility="{Binding IsLogged, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay}" Content="{DynamicResource Orders}" Margin="5" Command="{Binding OpenOrdersCommand}"/>
+            <Border Visibility="{Binding IsLogged, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay}">
+                <Button Visibility="{Binding IsAdmin, Converter={StaticResource InverseBooleanToVisibilityConverter}, Mode=TwoWay}" Content="{DynamicResource RegisterEvent}" Margin="5" Command="{Binding OpenUserEventsCommand}"/>
+            </Border>
+        </UniformGrid>
+        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5"/>
+    </Grid>
+</base:BaseUserControl>

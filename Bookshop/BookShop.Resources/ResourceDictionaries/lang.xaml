@@ -1,0 +1,114 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <v:String x:Key="ProgramTitle">Book Shop</v:String>
+    
+    <v:String x:Key="PersonTitle">Personal Area</v:String>
+    <v:String x:Key="Undo">Undo</v:String>
+    <v:String x:Key="Redo">Redo</v:String>
+    
+    
+    <v:String x:Key="Title">Books</v:String>
+    <v:String x:Key="LanguageT">EN</v:String>
+    <v:String x:Key="CategoryT">Category</v:String>
+
+    <v:String x:Key="Registration">Registration</v:String>
+    <v:String x:Key="RegisterTitle">Registration</v:String>
+    <v:String x:Key="LoginTitle">Login</v:String>
+    <v:String x:Key="Username">Username</v:String>
+    <v:String x:Key="Password">Password</v:String>
+    <v:String x:Key="ConfirmPassword">Confirm Password</v:String>
+    <v:String x:Key="LoginButton">Login</v:String>
+    <v:String x:Key="RegisterButton">Register</v:String>
+    
+    <v:String x:Key="DeleteTitle">Delete</v:String>
+    <v:String x:Key="DeleteQuestion">Do you want to delete?</v:String>
+    
+    <v:String x:Key="Cart">Cart</v:String>
+    <v:String x:Key="ProcessOrder">Process order</v:String>
+    <v:String x:Key="DeletePosition">Delete position</v:String>
+    <v:String x:Key="Cancel">Cancel</v:String>
+    <v:String x:Key="Back">Back</v:String>
+    
+    <v:String x:Key="Catalog">Catalog</v:String>
+    <v:String x:Key="Clients">Clients</v:String>
+    <v:String x:Key="Events">Events</v:String>
+    <v:String x:Key="Orders">Orders</v:String>
+    <v:String x:Key="RegisterEvent">Register Event</v:String>
+    
+    <!-- Clients -->
+    <v:String x:Key="Login">Login</v:String>
+    <v:String x:Key="Email">Email</v:String>
+    <v:String x:Key="FirstName">First Name</v:String>
+    <v:String x:Key="LastName">Last Name</v:String>
+    <v:String x:Key="Phone">Phone</v:String>
+    <v:String x:Key="Address">Address</v:String>
+    <v:String x:Key="IsAdmin">IsAdmin</v:String>
+    
+    
+    <v:String x:Key="AddUser">Add new user</v:String>
+    <v:String x:Key="EditUser">Edit user</v:String>
+    <v:String x:Key="DeleteUser">Delete user</v:String>
+    
+    <v:String x:Key="Save">Save</v:String>
+    
+    <!-- Register Event -->
+    <v:String x:Key="Register">Register</v:String>
+    <v:String x:Key="CancelRegister">Cancel registration</v:String>
+    
+    <v:String x:Key="SelectEvent">Select event</v:String>
+    <v:String x:Key="Name">Name</v:String>
+    <v:String x:Key="Description">Description</v:String>
+    <v:String x:Key="Location">Location</v:String>
+    <v:String x:Key="Date">Date</v:String>
+    
+    <!-- Order -->
+    <v:String x:Key="TotalPrice">Total price</v:String>
+    <v:String x:Key="Status">Status</v:String>
+    <v:String x:Key="EditOrder">Edit Order</v:String>
+    <v:String x:Key="DeleteOrder">Delete Order</v:String>
+
+    <!-- Event -->
+    <v:String x:Key="AddEvent">Add new event</v:String>
+    <v:String x:Key="EditEvent">Edit event</v:String>
+    <v:String x:Key="DeleteEvent">Delete event</v:String>
+    
+    <!-- Book -->
+    <v:String x:Key="AddBook">Add book</v:String>
+    <v:String x:Key="EditBook">Edit book</v:String>
+    <v:String x:Key="ViewBook">View book</v:String>
+    <v:String x:Key="DeleteBook">Delete book</v:String>
+    <v:String x:Key="AddToCart">Add to cart</v:String>
+    
+    <v:String x:Key="Available">Available</v:String>
+    <v:String x:Key="BookIsAvailable">Book is available?</v:String>
+    <v:String x:Key="Genres">Genres</v:String>
+    <v:String x:Key="Price">Price</v:String>
+    <v:String x:Key="Reset">Reset</v:String>
+    <v:String x:Key="Apply">Apply</v:String>
+    <v:String x:Key="PricePerOne">Price per one</v:String>
+    
+    <v:String x:Key="Genre">Genre</v:String>
+    <v:String x:Key="Author">Author</v:String>
+    <v:String x:Key="Cover">Cover</v:String>
+    
+    <v:String x:Key="ColorT">Color</v:String>
+    <v:String x:Key="CostT">Cost</v:String>
+    <v:String x:Key="ApplyT">Apply</v:String>
+    <v:String x:Key="ResetT">Reset</v:String>
+    <v:String x:Key="AddingT">Additing Good</v:String>
+    <v:String x:Key="NameT">Name</v:String>
+    <v:String x:Key="ShortNameT">Short Name</v:String>
+    <v:String x:Key="DescriptionT">Description</v:String>
+    <v:String x:Key="RatingT">Rating</v:String>
+    <v:String x:Key="PriceT">Price</v:String>
+    <v:String x:Key="AvailableT">is Available?</v:String>
+    <v:String x:Key="ImageT">Image</v:String>
+    <v:String x:Key="ChooseT">Choose</v:String>
+    <v:String x:Key="AddT">Add</v:String>
+    <v:String x:Key="CurrencyT">byn</v:String>
+    <v:String x:Key="DeleteT">Delete</v:String>
+    <v:String x:Key="EditT">Edit</v:String>
+    <v:String x:Key="ChangeCT">Theme</v:String>
+</ResourceDictionary>

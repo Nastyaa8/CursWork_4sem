@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="BookShop.Personal.Control.UserIcon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BookShop.Personal.Control"
+             xmlns:control="clr-namespace:BookShop.Personal.Control"
+             mc:Ignorable="d"
+             x:Name="Root"
+             PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+      
+        <Border BorderThickness="0" Background="#4E000000" BorderBrush="{StaticResource ThemeBrush}" CornerRadius="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border.Style>
+                <Style TargetType="{x:Type Border}">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <!-- Пример анимации: плавное изменение Opacity -->
+                                    <ThicknessAnimation Storyboard.TargetProperty="BorderThickness"
+                                                     From="1" To="0" Duration="0:0:0.5" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <!-- Пример анимации: плавное изменение Opacity -->
+                                    <ThicknessAnimation Storyboard.TargetProperty="BorderThickness"
+                                                        From="0" To="1" Duration="0:0:0.5" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <Image MinHeight="75" MinWidth="75" IsHitTestVisible="True" Source="{Binding Image, ElementName=Root, UpdateSourceTrigger=Default, Mode=TwoWay}" Stretch="Uniform"/>
+        </Border>
+        <ContentControl HorizontalAlignment="Center" Margin="20 10 20 2" FontSize="18" FontWeight="SemiBold" Grid.Row="1" Content="{Binding Text, ElementName=Root, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox HorizontalAlignment="Center" Margin="20 2 20 20" FontSize="16" FontWeight="SemiBold" Grid.Row="2" Text="{Binding DescriptionText, ElementName=Root, UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="BookShop.Views.Users.UsersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:users="clr-namespace:BookShop.ViewModels.Users"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=users:UsersViewModel, IsDesignTimeCreatable=True}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+        <DataGrid Grid.Row="1" 
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" 
+                  SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}">
+            <DataGrid.Columns>
+                <DataGridTextColumn HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Header="Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}"  Width="Auto"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource HeaderStyleLogin}" Binding="{Binding Login, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource HeaderStyleEmail}" Binding="{Binding Email, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource HeaderStyleFirstName}" Binding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource HeaderStyleLastName}" Binding="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource HeaderStylePhone}" Binding="{Binding Phone, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{StaticResource HeaderStyleAddress}" Binding="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridCheckBoxColumn HeaderStyle="{StaticResource HeaderStyleIsAdmin}" Binding="{Binding IsAdmin, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="3">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource AddUser}" Margin="0 0 5 0" Command="{Binding AddCommand}"/>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource EditUser}" Margin="5" Command="{Binding EditCommand}"/>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource DeleteUser}" Margin="5 0 0 0" Command="{Binding DeleteCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

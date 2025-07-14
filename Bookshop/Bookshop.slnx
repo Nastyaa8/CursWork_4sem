@@ -1,0 +1,6 @@
+﻿<Solution>
+  <Folder Name="/New/">
+    <Project Path="New\BookShop\BookShop.csproj" Type="Classic C#" />
+  </Folder>
+  <Project Path="Bookshop\Bookshop.csproj" Type="Classic C#" />
+</Solution>

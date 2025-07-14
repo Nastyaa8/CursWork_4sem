@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="BookShop.Views.Orders.OrdersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:orders="clr-namespace:BookShop.ViewModels.Orders"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=orders:OrdersViewModel, IsDesignTimeCreatable=True}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+        <DataGrid Grid.Row="1" 
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" 
+                  SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}">
+            <DataGrid.Columns>
+                <DataGridTextColumn HeaderStyle="{DynamicResource DataGridColumnHeaderStyle}" Header="Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
+                <DataGridTextColumn Visibility="{Binding IsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}" HeaderStyle="{DynamicResource HeaderStyleFirstName}" Binding="{Binding User.FirstName, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn Visibility="{Binding IsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}" HeaderStyle="{DynamicResource HeaderStyleLastName}" Binding="{Binding User.LastName, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{DynamicResource HeaderStyleTotalPrice}" Binding="{Binding TotalPrice, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{DynamicResource HeaderStyleDate}" Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged, StringFormat='dd.MM.yyyy'}" Width="*"/>
+                <DataGridTextColumn HeaderStyle="{DynamicResource HeaderStyleStatus}" Binding="{Binding Status, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0 5">
+            <Button Visibility="{Binding IsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource EditOrder}" Margin="0 0 5 0"  Command="{Binding EditCommand}"/>
+            <Button Visibility="{Binding IsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource DeleteOrder}" Margin="5 0 0 0" Command="{Binding DeleteCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

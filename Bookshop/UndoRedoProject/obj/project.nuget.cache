@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tKjWf86qq3M=",
+  "success": true,
+  "projectFilePath": "D:\\Универ\\Bookshop\\Bookshop\\UndoRedoProject\\UndoRedoProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hasee\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.135\\microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512"
+  ],
+  "logs": []
+}

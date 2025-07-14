@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="BookShop.Views.Events.AddEventView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:events="clr-namespace:BookShop.ViewModels.Events"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=events:AddEventViewModel, IsDesignTimeCreatable=True}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="5">
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontWeight="SemiBold" Text="{DynamicResource Name}" Margin="0 0 5 10"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Margin="0 0 5 10" Text="{Binding Entity.Name, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnNotifyDataErrors=True}"/>
+                <TextBlock FontWeight="SemiBold" Grid.Row="1" Grid.Column="0" Text="{DynamicResource Description}" Margin="0 0 5 10"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="0 0 5 10" Height="50" VerticalScrollBarVisibility="Auto" Text="{Binding Entity.Description, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnNotifyDataErrors=True}" TextWrapping="Wrap"/>
+                <TextBlock FontWeight="SemiBold" Grid.Row="2" Grid.Column="0"  Text="{DynamicResource Location}" Margin="0 0 5 10"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="0 0 5 10" Text="{Binding Entity.Location, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnNotifyDataErrors=True}"/>
+                <TextBlock FontWeight="SemiBold" Grid.Row="3" Grid.Column="0"  Text="{DynamicResource Date}" Margin="0 0 5 10"/>
+                <DatePicker Grid.Row="3" Grid.Column="1" Margin="0 0 5 10" SelectedDate="{Binding Entity.Date, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnNotifyDataErrors=True}"/>
+            </Grid>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
+            <Button Content="{DynamicResource Save}" Margin="0 0 5 0" Command="{Binding SaveCommand}"></Button>
+            <Button Content="{DynamicResource Back}" Margin="5 0 0 0" Command="{Binding BackCommand}"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,112 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <v:String x:Key="ProgramTitle">Магазин книг</v:String>
+    
+    <v:String x:Key="PersonTitle">Личный кабинет</v:String>
+    <v:String x:Key="Undo">Отменить</v:String>
+    <v:String x:Key="Redo">Повторить</v:String>
+    
+    <v:String x:Key="Title">Книги</v:String>
+    <v:String x:Key="LanguageT">RU</v:String>
+    <v:String x:Key="CategoryT">Категория</v:String>
+
+    <v:String x:Key="Registration">Зарегистрироваться</v:String>
+    <v:String x:Key="RegisterTitle">Регистрация в системе</v:String>
+    <v:String x:Key="LoginTitle">Вход в систему</v:String>
+    <v:String x:Key="Username">Имя пользователя</v:String>
+    <v:String x:Key="Password">Пароль</v:String>
+    <v:String x:Key="ConfirmPassword">Подтвердить пароль</v:String>
+    <v:String x:Key="LoginButton">Войти</v:String>
+    <v:String x:Key="RegisterButton">Зарегистрироваться</v:String>
+
+    <v:String x:Key="DeleteTitle">Удаление</v:String>
+    <v:String x:Key="DeleteQuestion">Вы хотите удалить?</v:String>
+    
+    <v:String x:Key="Cart">Корзина</v:String>
+    <v:String x:Key="ProcessOrder">Оформить заказ</v:String>
+    <v:String x:Key="DeletePosition">Удалить позицию</v:String>
+    <v:String x:Key="Cancel">Отменить</v:String>
+    <v:String x:Key="Back">Назад</v:String>
+    
+    <v:String x:Key="Catalog">Каталог</v:String>
+    <v:String x:Key="Clients">Клиенты</v:String>
+    <v:String x:Key="Events">События</v:String>
+    <v:String x:Key="Orders">Заказы</v:String>
+    <v:String x:Key="RegisterEvent">Запись на мероприятие</v:String>
+    
+    <!-- Clients -->
+    <v:String x:Key="Login">Логин</v:String>
+    <v:String x:Key="Email">Email</v:String>
+    <v:String x:Key="FirstName">Имя</v:String>
+    <v:String x:Key="LastName">Фамилия</v:String>
+    <v:String x:Key="Phone">Телефон</v:String>
+    <v:String x:Key="Address">Адрес</v:String>
+    <v:String x:Key="IsAdmin">Админ?</v:String>
+    
+    <v:String x:Key="AddUser">Добавить пользователя</v:String>
+    <v:String x:Key="EditUser">Редактировать пользователя</v:String>
+    <v:String x:Key="DeleteUser">Удалить пользователя</v:String>
+    
+    <v:String x:Key="Save">Сохранить</v:String>
+    
+    <!-- Register Event -->
+    <v:String x:Key="Register">Записаться</v:String>
+    <v:String x:Key="CancelRegister">Отменить регистрацию</v:String>
+
+    <v:String x:Key="SelectEvent">Выберите мероприятие</v:String>
+    <v:String x:Key="Name">Имя</v:String>
+    <v:String x:Key="Description">Описание</v:String>
+    <v:String x:Key="Location">Место</v:String>
+    <v:String x:Key="Date">Дата</v:String>
+    
+    <!-- Order -->
+    <v:String x:Key="TotalPrice">Общая цена</v:String>
+    <v:String x:Key="Status">Состояние</v:String>
+    <v:String x:Key="EditOrder">Редактировать заказ</v:String>
+    <v:String x:Key="DeleteOrder">Удалить заказ</v:String>
+    
+    <!-- Event -->
+    <v:String x:Key="AddEvent">Новое мероприятие</v:String>
+    <v:String x:Key="EditEvent">Редактировать мероприятие</v:String>
+    <v:String x:Key="DeleteEvent">Удалить мероприятие</v:String>
+    
+    <!-- Book -->
+    <v:String x:Key="AddBook">Новая книга</v:String>
+    <v:String x:Key="EditBook">Редактировать книгу</v:String>
+    <v:String x:Key="ViewBook">Просмотреть книгу</v:String>
+    <v:String x:Key="DeleteBook">Удалить книгу</v:String>
+    <v:String x:Key="AddToCart">Добавить в корзину</v:String>
+    
+    <v:String x:Key="Available">Доступно</v:String>
+    <v:String x:Key="BookIsAvailable">Доступно для продажи?</v:String>
+    <v:String x:Key="Genres">Жанры</v:String>
+    <v:String x:Key="Price">Цена</v:String>
+    <v:String x:Key="Reset">Сбросить</v:String>
+    <v:String x:Key="Apply">Применить</v:String>
+    <v:String x:Key="PricePerOne">Цена за штуку</v:String>
+    
+    <v:String x:Key="Genre">Жанр</v:String>
+    <v:String x:Key="Author">Автор</v:String>
+    <v:String x:Key="Cover">Обложка</v:String>
+    
+    <v:String x:Key="ColorT">Цвет</v:String>
+    <v:String x:Key="CostT">Цена</v:String>
+    <v:String x:Key="ApplyT">Применить</v:String>
+    <v:String x:Key="ResetT">Сбросить</v:String>
+    <v:String x:Key="AddingT">Добавление товара</v:String>
+    <v:String x:Key="NameT">Название</v:String>
+    <v:String x:Key="ShortNameT">Сокращенное название</v:String>
+    <v:String x:Key="DescriptionT">Описание</v:String>
+    <v:String x:Key="RatingT">Рейтинг</v:String>
+    <v:String x:Key="PriceT">Цена</v:String>
+    <v:String x:Key="AvailableT">В наличии?</v:String>
+    <v:String x:Key="ImageT">Изображение</v:String>
+    <v:String x:Key="ChooseT">Выбрать</v:String>
+    <v:String x:Key="AddT">Добавить</v:String>
+    <v:String x:Key="CurrencyT">руб</v:String>
+    <v:String x:Key="DeleteT">Удалить</v:String>
+    <v:String x:Key="EditT">Изменить</v:String>
+    <v:String x:Key="ChangeCT">Тема</v:String>
+</ResourceDictionary>
